@@ -124,7 +124,7 @@ Fixed	Fixed::operator/(const Fixed &_fixed)const
 {
 	Fixed	_result;
 
-	_result.setRawBits((getRawBits() / _fixed.getRawBits())<<_bits);
+	_result.setRawBits((getRawBits()<<_bits) / _fixed.getRawBits());
 	return (_result);
 }
 
@@ -160,6 +160,7 @@ Fixed	Fixed::operator--(int)
 	return (_result);
 }
 
+//other
 const Fixed	&Fixed::min(const Fixed &_fixed1, const Fixed &_fixed2)
 {
 	if (_fixed1 < _fixed2)
@@ -184,7 +185,6 @@ const Fixed	&max(const Fixed &_fixed1, const Fixed &_fixed2)
 	return (Fixed::max(_fixed1, _fixed2));
 }
 
-//other
 std::ostream	&operator<<(std::ostream &_out, const Fixed &_fixed)
 {
 	_out<<_fixed.toFloat();
