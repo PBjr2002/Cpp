@@ -2,7 +2,7 @@ CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 NAME = materia
 
-SOURCES =	main.cpp
+SOURCES =	main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 OBJS_DIR = obj
 OBJECTS = $(addprefix $(OBJS_DIR)/, $(SOURCES:%.cpp=%.o))
 
