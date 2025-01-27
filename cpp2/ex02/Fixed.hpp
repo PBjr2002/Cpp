@@ -42,8 +42,10 @@ public:
 	Fixed	&operator--();
 	Fixed	operator++(int);
 	Fixed	operator--(int);
-	static const Fixed	&min(const Fixed &_fixed1, const Fixed &_fixed2);
-	static const Fixed	&max(const Fixed &_fixed1, const Fixed &_fixed2);
+	static const	Fixed	&min(const Fixed &_fixed1, const Fixed &_fixed2);
+	static const	Fixed	&max(const Fixed &_fixed1, const Fixed &_fixed2);
+	static 	Fixed	&min(Fixed &_fixed1, Fixed &_fixed2);
+	static 	Fixed	&max(Fixed &_fixed1, Fixed &_fixed2);
 	~Fixed();
 	int	getRawBits(void)const;
 	void	setRawBits(int const raw);
@@ -52,7 +54,5 @@ public:
 };
 
 std::ostream	&operator<<(std::ostream &_out, const Fixed &_fixed);
-const	Fixed	&min(const Fixed &_fixed1, const Fixed &_fixed2);
-const	Fixed	&max(const Fixed &_fixed1, const Fixed &_fixed2);
 
 #endif
