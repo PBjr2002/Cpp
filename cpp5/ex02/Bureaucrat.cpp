@@ -57,7 +57,7 @@ const std::string	Bureaucrat::getName()
 	return (_name);
 }
 
-int	Bureaucrat::getGrade()
+int	Bureaucrat::getGrade() const
 {
 	return (_grade);
 }
@@ -78,7 +78,7 @@ void	Bureaucrat::decrement()
 		throw GradeTooLowException();
 }
 
-void	Bureaucrat::signForm(Form &form)
+void	Bureaucrat::signForm(AForm &form)
 {
 	try
 	{

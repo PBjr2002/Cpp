@@ -33,10 +33,9 @@ Bureaucrat::~Bureaucrat()
 	std::cout<<RED"Bureaucrat destructor called" RESET<<std::endl;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat &copy)
+Bureaucrat::Bureaucrat(Bureaucrat &copy) : _name(copy._name), _grade(copy._grade)
 {
 	std::cout<<YELLOW"Bureaucrat Copy constructor called" RESET<<std::endl;
-	*this = copy;
 }
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat &copy)

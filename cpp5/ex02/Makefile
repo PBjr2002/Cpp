@@ -2,7 +2,7 @@ CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 NAME = form
 
-SOURCES =	main.cpp Bureaucrat.cpp Form.cpp
+SOURCES =	main.cpp Bureaucrat.cpp AForm.cpp
 OBJS_DIR = obj
 OBJECTS = $(addprefix $(OBJS_DIR)/, $(SOURCES:%.cpp=%.o))
 

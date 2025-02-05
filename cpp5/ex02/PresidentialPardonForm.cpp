@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pauberna <pauberna@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-02-04 10:49:04 by pauberna          #+#    #+#             */
-/*   Updated: 2025-02-04 10:49:04 by pauberna         ###   ########.fr       */
+/*   Created: 2025-02-05 16:27:35 by pauberna          #+#    #+#             */
+/*   Updated: 2025-02-05 16:27:35 by pauberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int	main(void)
+PresidentialPardonForm::PresidentialPardonForm()
 {
-	Bureaucrat	person1("General", 1);
-	Bureaucrat	person2("Harl", 150);
-	Form	form("Execute Harl", 10, 1);
 
-	std::cout<<person1<<std::endl;
-	std::cout<<person2<<std::endl;
-	std::cout<<form<<std::endl<<std::endl;
+}
 
-	person2.signForm(form);
-	std::cout<<form<<std::endl<<std::endl;
-	person1.signForm(form);
-	std::cout<<form<<std::endl;
-	
-	return (0);
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &copy)
+{
+
+}
+
+PresidentialPardonForm::~PresidentialPardonForm()
+{
+
+}
+
+PresidentialPardonForm&	PresidentialPardonForm::operator=(PresidentialPardonForm &copy)
+{
+	return (*this);
 }

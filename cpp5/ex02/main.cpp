@@ -11,22 +11,10 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 int	main(void)
 {
-	Bureaucrat	person1("General", 1);
-	Bureaucrat	person2("Harl", 150);
-	Form	form("Execute Harl", 10, 1);
-
-	std::cout<<person1<<std::endl;
-	std::cout<<person2<<std::endl;
-	std::cout<<form<<std::endl<<std::endl;
-
-	person2.signForm(form);
-	std::cout<<form<<std::endl<<std::endl;
-	person1.signForm(form);
-	std::cout<<form<<std::endl;
 	
 	return (0);
 }

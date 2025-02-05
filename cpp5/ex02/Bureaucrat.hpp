@@ -16,14 +16,14 @@
 # include <iostream>
 # include <string>
 # include <exception>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 # define RESET "\033[0m"
 # define GREEN "\033[1m\033[32m"
 # define RED "\033[1m\033[31m"
 # define YELLOW "\033[1m\033[33m"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -37,10 +37,10 @@ public:
 	Bureaucrat(Bureaucrat &copy);
 	Bureaucrat	&operator=(Bureaucrat &copy);
 	const std::string	getName();
-	int	getGrade();
+	int	getGrade() const;
 	void	increment();
 	void	decrement();
-	void	signForm(Form &form);
+	void	signForm(AForm &form);
 	class	GradeTooHighException : public std::exception
 	{
 		public:
