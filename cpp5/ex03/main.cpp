@@ -15,6 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int	main(void)
 {
@@ -23,6 +24,8 @@ int	main(void)
 	ShrubberyCreationForm	shrubbery("Karen");
 	RobotomyRequestForm		robotomy("another Karen");
 	PresidentialPardonForm	pardon("Harl");
+	Intern	intern;
+	AForm	*form;
 
 	std::cout<<bob<<std::endl;
 	std::cout<<general<<std::endl<<std::endl;
@@ -52,6 +55,14 @@ int	main(void)
 	general.signForm(pardon);
 	bob.executeForm(pardon);
 	general.executeForm(pardon);
+
+	form = intern.makeForm("Ola", "Alguem");
+	form = intern.makeForm("PresidentialPardonForm", "Karen");
+
+	general.signForm(*form);
+	general.executeForm(*form);
+
+	delete form;
 	
 	return (0);
 }

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pauberna <pauberna@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-02-05 14:39:30 by pauberna          #+#    #+#             */
-/*   Updated: 2025-02-05 14:39:30 by pauberna         ###   ########.fr       */
+/*   Created: 2025-02-06 14:31:02 by pauberna          #+#    #+#             */
+/*   Updated: 2025-02-06 14:31:02 by pauberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef	INTERN_HPP
+# define INTERN_HPP
 
 # include <iostream>
 # include <string>
@@ -19,25 +19,21 @@
 # include <math.h>
 # include <cmath>
 # include <fstream>
-# include <exception>
 # include "AForm.hpp"
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
 
-class RobotomyRequestForm : public AForm
+class AForm;
+
+class Intern
 {
-private:
-	std::string	_target;
 public:
-	RobotomyRequestForm();
-	RobotomyRequestForm(std::string target);
-	RobotomyRequestForm(RobotomyRequestForm &copy);
-	RobotomyRequestForm& operator=(RobotomyRequestForm &copy);
-	~RobotomyRequestForm();
-	virtual void	executeForm() const;
-	class	RobotomyFailedException : public std::exception
-	{
-		public:
-			virtual const char *what() const throw();
-	};
+	Intern();
+	Intern(Intern &copy);
+	Intern& operator=(Intern &copy);
+	~Intern();
+	AForm	*makeForm(std::string name, std::string target);
 };
 
 #endif
