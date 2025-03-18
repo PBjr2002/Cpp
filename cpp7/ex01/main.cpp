@@ -62,7 +62,7 @@ int	main(void)
 	std::cout<<"chArr[1]: "<<chArr[1]<<std::endl;
 	std::cout<<"chArr[2]: "<<chArr[2]<<std::endl;
 	std::cout<<YELLOW<<"change on chArr"<<RESET<<std::endl;
-	::iter(chArr, 3, change);
+	::iter(chArr, 3, change<char>);
 	std::cout<<"chArr[0]: "<<chArr[0]<<std::endl;
 	std::cout<<"chArr[1]: "<<chArr[1]<<std::endl;
 	std::cout<<"chArr[2]: "<<chArr[2]<<std::endl;
@@ -82,7 +82,7 @@ int	main(void)
 	std::cout<<"intArr[1]: "<<intArr[1]<<std::endl;
 	std::cout<<"intArr[2]: "<<intArr[2]<<std::endl;
 	std::cout<<YELLOW<<"change on intArr"<<RESET<<std::endl;
-	::iter(intArr, 3, change);
+	::iter(intArr, 3, change<int>);
 	std::cout<<"intArr[0]: "<<intArr[0]<<std::endl;
 	std::cout<<"intArr[1]: "<<intArr[1]<<std::endl;
 	std::cout<<"intArr[2]: "<<intArr[2]<<std::endl;

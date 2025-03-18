@@ -9,65 +9,30 @@
 /*   Updated: 2025-03-18 11:00:30 by pauberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "Span.hpp"
 
-#include "easyfind.hpp"
-
-int	main(void)
+int main(void)
 {
-	std::vector<int>	vector;
-	vector.push_back(42);
-	vector.push_back(43);
-	vector.push_back(44);
+	srand(time(NULL));
+	Span	sp = Span(20);
 
-	std::vector<int>::iterator	iterator = vector.end();
-
+	sp.fillSpan();
+	std::cout<<std::endl;
 	try
 	{
-		iterator = ::easyfind(vector, 42);
+		std::cout << sp.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	if (iterator != vector.end())
-		std::cout<<"Found "<<*iterator<<std::endl;
-	iterator = vector.end();
-	
 	try
 	{
-		iterator = ::easyfind(vector, 41);
+		std::cout << sp.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	if (iterator != vector.end())
-		std::cout<<"Found "<<*iterator<<std::endl;
-	iterator = vector.end();
-	
-	try
-	{
-		iterator = ::easyfind(vector, 44);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	if (iterator != vector.end())
-		std::cout<<"Found "<<*iterator<<std::endl;
-	iterator = vector.end();
-
-	try
-	{
-		iterator = ::easyfind(vector, 45);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	if (iterator != vector.end())
-		std::cout<<"Found "<<*iterator<<std::endl;
-	iterator = vector.end();
-	
 	return (0);
 }

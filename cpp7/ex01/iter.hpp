@@ -25,14 +25,14 @@
 # define RED "\033[1m\033[31m"
 # define YELLOW "\033[1m\033[33m"
 
-template <typename T>
-void	iter(T *array, size_t len, void (*function)(T &))
+template <typename T, typename F>
+void	iter(T *array, size_t len, F f)
 {
-	if (!array || !function)
+	if (!array || !f)
 		return ;
 	for (size_t i = 0; i < len; i++)
 	{
-		function(array[i]);
+		f(array[i]);
 	}
 }
 
