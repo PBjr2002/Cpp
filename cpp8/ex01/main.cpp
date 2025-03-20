@@ -9,6 +9,7 @@
 /*   Updated: 2025-03-18 11:00:30 by pauberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "Span.hpp"
 
 int main(void)
@@ -20,7 +21,7 @@ int main(void)
 	std::cout<<std::endl;
 	try
 	{
-		std::cout << sp.shortestSpan() << std::endl;
+		std::cout<<"ShortestSpan: "<<sp.shortestSpan()<<std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -28,7 +29,7 @@ int main(void)
 	}
 	try
 	{
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout<<"LongestSpan: "<<sp.longestSpan()<<std::endl;
 	}
 	catch(const std::exception& e)
 	{

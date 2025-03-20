@@ -17,9 +17,9 @@ int main()
 	MutantStack<int> mstack;
 	mstack.push(5);
 	mstack.push(17);
-	std::cout<<"1st element of mstack using top: "<<mstack.top()<<std::endl;
+	std::cout<<YELLOW<<"1st element of mstack using top: "<<RESET<<mstack.top()<<std::endl;
 	mstack.pop();
-	std::cout<<"Size of mstack after using pop: "<<mstack.size()<<std::endl;
+	std::cout<<YELLOW<<"Size of mstack after using pop: "<<RESET<<mstack.size()<<std::endl;
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
