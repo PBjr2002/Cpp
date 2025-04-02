@@ -1,8 +1,8 @@
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -g
-NAME = btc
+NAME = RPN
 
-SOURCES =	main.cpp BitcoinExchange.cpp
+SOURCES =	main.cpp RPN.cpp
 OBJS_DIR = obj
 OBJECTS = $(addprefix $(OBJS_DIR)/, $(SOURCES:%.cpp=%.o))
 

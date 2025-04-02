@@ -1,8 +1,8 @@
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -g
-NAME = btc
+NAME = PmergeMe
 
-SOURCES =	main.cpp BitcoinExchange.cpp
+SOURCES =	main.cpp PmergeMe.cpp
 OBJS_DIR = obj
 OBJECTS = $(addprefix $(OBJS_DIR)/, $(SOURCES:%.cpp=%.o))
 
