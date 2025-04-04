@@ -19,5 +19,15 @@ int	main(int ac, char **av)
 		std::cerr<<RED<<"Invalid number of arguments"<<RESET<<std::endl;
 		return (1);
 	}
+	try
+	{
+		PmergeMe	merge(ac, av);
+		merge.sort();
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 	return (0);
 }

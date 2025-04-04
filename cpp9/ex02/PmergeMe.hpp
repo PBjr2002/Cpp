@@ -25,6 +25,7 @@
 # include <stack>
 # include <map>
 # include <algorithm>
+# include <sys/time.h>  
 
 # define RESET "\033[0m"
 # define GREEN "\033[1m\033[32m"
@@ -34,12 +35,40 @@
 class PmergeMe
 {
 	private:
-
+		std::vector<unsigned int>	_vector;
+		std::list<unsigned int>		_list;
+		long						_vectorTimer;
+		long						_listTimer;
 	public:
 		PmergeMe();
+		PmergeMe(int ac, char **av);
 		PmergeMe(const PmergeMe &copy);
 		PmergeMe	&operator=(const PmergeMe &copy);
 		~PmergeMe();
+		long	getVectorTimer();
+		long	getListTimer();
+		bool	checkIfIsDigit(char *str);
+		void	binaryInsertionForVector(std::vector<unsigned int> &vector, unsigned int left, unsigned int right, unsigned int number);
+		void	binaryInsertionForList(std::list<unsigned int> &list, unsigned int left, unsigned int right, unsigned int number);
+		void	fordJonhsonSortForVector(std::vector<unsigned int> &vector, unsigned int left, unsigned int right);
+		void	fordJonhsonSortForList(std::list<unsigned int> &list, unsigned int left, unsigned int right);
+		void	sort();
+		void	checkIfSorted();
+		class	InvalidInputException : public std::runtime_error
+		{
+			public:
+				InvalidInputException();
+		};
+		class	NotOrderedVectorException : public std::runtime_error
+		{
+			public:
+				NotOrderedVectorException();
+		};
+		class	NotOrderedListException : public std::runtime_error
+		{
+			public:
+				NotOrderedListException();
+		};
 };
 
 #endif
